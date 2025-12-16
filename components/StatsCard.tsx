@@ -12,11 +12,23 @@ interface StatsCardProps {
 }
 
 export default function StatsCard({ title, value, icon: Icon, progress, color }: StatsCardProps) {
-  const colorClasses = {
+  const colorClasses: Record<'yellow' | 'blue' | 'purple', { bg: string; border: string; text: string; glow: string }> = {
     yellow: {
       bg: 'bg-yellow-primary/20',
       border: 'border-yellow-primary/50',
       text: 'text-yellow-primary',
+      glow: ''
+    },
+    blue: {
+      bg: 'bg-blue-500/20',
+      border: 'border-blue-500/50',
+      text: 'text-blue-400',
+      glow: ''
+    },
+    purple: {
+      bg: 'bg-purple-500/20',
+      border: 'border-purple-500/50',
+      text: 'text-purple-400',
       glow: ''
     }
   }
